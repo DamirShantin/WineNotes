@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		3F95F9CA2E579BC400FD373B /* WineNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F49BD872F9C078800379168 /* WineNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WineNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3F95F9CC2E579BC400FD373B /* WineNotes */ = {
+		3F49BD892F9C078800379168 /* WineNotes */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = WineNotes;
 			sourceTree = "<group>";
@@ -19,7 +19,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3F95F9C72E579BC400FD373B /* Frameworks */ = {
+		3F49BD842F9C078800379168 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3F95F9C12E579BC400FD373B = {
+		3F49BD7E2F9C078800379168 = {
 			isa = PBXGroup;
 			children = (
-				3F95F9CC2E579BC400FD373B /* WineNotes */,
-				3F95F9CB2E579BC400FD373B /* Products */,
+				3F49BD892F9C078800379168 /* WineNotes */,
+				3F49BD882F9C078800379168 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3F95F9CB2E579BC400FD373B /* Products */ = {
+		3F49BD882F9C078800379168 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F95F9CA2E579BC400FD373B /* WineNotes.app */,
+				3F49BD872F9C078800379168 /* WineNotes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F95F9C92E579BC400FD373B /* WineNotes */ = {
+		3F49BD862F9C078800379168 /* WineNotes */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F95F9D52E579BC500FD373B /* Build configuration list for PBXNativeTarget "WineNotes" */;
+			buildConfigurationList = 3F49BD922F9C078900379168 /* Build configuration list for PBXNativeTarget "WineNotes" */;
 			buildPhases = (
-				3F95F9C62E579BC400FD373B /* Sources */,
-				3F95F9C72E579BC400FD373B /* Frameworks */,
-				3F95F9C82E579BC400FD373B /* Resources */,
+				3F49BD832F9C078800379168 /* Sources */,
+				3F49BD842F9C078800379168 /* Frameworks */,
+				3F49BD852F9C078800379168 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3F95F9CC2E579BC400FD373B /* WineNotes */,
+				3F49BD892F9C078800379168 /* WineNotes */,
 			);
 			name = WineNotes;
 			packageProductDependencies = (
 			);
 			productName = WineNotes;
-			productReference = 3F95F9CA2E579BC400FD373B /* WineNotes.app */;
+			productReference = 3F49BD872F9C078800379168 /* WineNotes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3F95F9C22E579BC400FD373B /* Project object */ = {
+		3F49BD7F2F9C078800379168 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1640;
-				LastUpgradeCheck = 1640;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
 				TargetAttributes = {
-					3F95F9C92E579BC400FD373B = {
-						CreatedOnToolsVersion = 16.4;
+					3F49BD862F9C078800379168 = {
+						CreatedOnToolsVersion = 26.3;
 					};
 				};
 			};
-			buildConfigurationList = 3F95F9C52E579BC400FD373B /* Build configuration list for PBXProject "WineNotes" */;
+			buildConfigurationList = 3F49BD822F9C078800379168 /* Build configuration list for PBXProject "WineNotes" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 3F95F9C12E579BC400FD373B;
+			mainGroup = 3F49BD7E2F9C078800379168;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 3F95F9CB2E579BC400FD373B /* Products */;
+			productRefGroup = 3F49BD882F9C078800379168 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F95F9C92E579BC400FD373B /* WineNotes */,
+				3F49BD862F9C078800379168 /* WineNotes */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3F95F9C82E579BC400FD373B /* Resources */ = {
+		3F49BD852F9C078800379168 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3F95F9C62E579BC400FD373B /* Sources */ = {
+		3F49BD832F9C078800379168 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3F95F9D32E579BC500FD373B /* Debug */ = {
+		3F49BD902F9C078900379168 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -178,7 +178,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -189,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		3F95F9D42E579BC500FD373B /* Release */ = {
+		3F49BD912F9C078900379168 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -236,7 +236,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -246,7 +246,7 @@
 			};
 			name = Release;
 		};
-		3F95F9D62E579BC500FD373B /* Debug */ = {
+		3F49BD932F9C078900379168 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -268,13 +268,17 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Damir-Shantin.WineNotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		3F95F9D72E579BC500FD373B /* Release */ = {
+		3F49BD942F9C078900379168 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -296,7 +300,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Damir-Shantin.WineNotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,25 +313,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3F95F9C52E579BC400FD373B /* Build configuration list for PBXProject "WineNotes" */ = {
+		3F49BD822F9C078800379168 /* Build configuration list for PBXProject "WineNotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F95F9D32E579BC500FD373B /* Debug */,
-				3F95F9D42E579BC500FD373B /* Release */,
+				3F49BD902F9C078900379168 /* Debug */,
+				3F49BD912F9C078900379168 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F95F9D52E579BC500FD373B /* Build configuration list for PBXNativeTarget "WineNotes" */ = {
+		3F49BD922F9C078900379168 /* Build configuration list for PBXNativeTarget "WineNotes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3F95F9D62E579BC500FD373B /* Debug */,
-				3F95F9D72E579BC500FD373B /* Release */,
+				3F49BD932F9C078900379168 /* Debug */,
+				3F49BD942F9C078900379168 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3F95F9C22E579BC400FD373B /* Project object */;
+	rootObject = 3F49BD7F2F9C078800379168 /* Project object */;
 }

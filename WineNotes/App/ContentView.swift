@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  WineNotes
 //
-//  Created by Дамир Шаймуханбетов on 21.08.2025.
+//  Created by Дамир Шаймуханбетов on 24.04.2026.
 //
 
 import SwiftUI
