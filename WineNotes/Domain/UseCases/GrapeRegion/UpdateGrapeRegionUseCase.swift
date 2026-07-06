@@ -16,7 +16,7 @@ final class UpdateGrapeRegionUseCaseImpl: UpdateGrapeRegionUseCase {
         do {
             try await repo.updateGrapeRegion(region)
         } catch {
-            throw GrapeError.nonFoundRegion
+            throw GrapeError.nonFoundRegions
         }
     }
 }

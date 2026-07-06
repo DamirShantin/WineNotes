@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="24512" systemVersion="25D2128" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="GrapeCountryDTO" representedClassName="GrapeCountryDTO" syncable="YES">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="grape" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GrapeDTO"/>
+        <relationship name="regions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GrapeRegionDTO"/>
+        <relationship name="wine" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WineDTO"/>
+    </entity>
+    <entity name="GrapeDTO" representedClassName="GrapeDTO" syncable="YES">
+        <attribute name="aliases" optional="YES" attributeType="Transformable"/>
+        <attribute name="aromas" optional="YES" attributeType="String"/>
+        <attribute name="colorRaw" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="latin" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="origin" optional="YES" attributeType="String"/>
+        <relationship name="countries" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GrapeCountryDTO"/>
+        <relationship name="regions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GrapeRegionDTO"/>
+        <relationship name="wines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WineDTO"/>
+    </entity>
+    <entity name="GrapeRegionDTO" representedClassName="GrapeRegionDTO" syncable="YES">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="knownAs" optional="YES" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <relationship name="country" maxCount="1" deletionRule="Nullify" destinationEntity="GrapeCountryDTO"/>
+        <relationship name="grapes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GrapeDTO"/>
+        <relationship name="wines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WineDTO"/>
+    </entity>
+    <entity name="TastingDTO" representedClassName="TastingDTO" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="desc" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="price" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="shop" optional="YES" attributeType="String"/>
+        <attribute name="statusRaw" attributeType="String"/>
+        <attribute name="year" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="characters" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WineCharacteristicsDTO"/>
+        <relationship name="wine" maxCount="1" deletionRule="Nullify" destinationEntity="WineDTO"/>
+    </entity>
+    <entity name="WineCharacteristicsDTO" representedClassName="WineCharacteristicsDTO" syncable="YES">
+        <attribute name="acidity" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="density" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dryness" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="richness" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="tastings" maxCount="1" deletionRule="Nullify" destinationEntity="TastingDTO"/>
+    </entity>
+    <entity name="WineDTO" representedClassName="WineDTO" syncable="YES">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="statusRaw" attributeType="String"/>
+        <attribute name="typeRaw" attributeType="String"/>
+        <relationship name="country" maxCount="1" deletionRule="Nullify" destinationEntity="GrapeCountryDTO"/>
+        <relationship name="grapes" toMany="YES" deletionRule="Nullify" destinationEntity="GrapeDTO"/>
+        <relationship name="region" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GrapeRegionDTO"/>
+        <relationship name="tastings" toMany="YES" deletionRule="Nullify" destinationEntity="TastingDTO"/>
+    </entity>
+</model>

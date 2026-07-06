@@ -16,7 +16,7 @@ final class CreateGrapeRegionUseCaseImpl: CreateGrapeRegionUseCase {
         do {
             try await repo.createGrapeRegion(region)
         } catch {
-            throw GrapeError.nonFoundRegion
+            throw GrapeError.nonFoundRegions
         }
     }
 }

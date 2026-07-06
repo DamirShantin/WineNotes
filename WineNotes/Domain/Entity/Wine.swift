@@ -4,10 +4,10 @@ import Foundation
 struct Wine: Identifiable {
     var id:       String
     var name:     String
-    var country:  String
-    var region:   String
+    var country:  String   // GrapeCountry
+    var region:   String   // GrapeRegion
     var type:     WineType
-    var grapes:   [String]
+    var grapes:   [Grape]
     var tastings: [Tasting]
     var status:   WineStatus
 
@@ -18,10 +18,14 @@ struct Wine: Identifiable {
     }
 
     var tastedCount: Int { tastings.filter { $0.status == .tasted }.count }
+    var tastedYearsText: String {
+        let years = tastings.compactMap(\.year)
+        let shown = years.prefix(3).map(String.init).joined(separator: ", ")
+        return years.count > 3 ? "\(shown)..." : shown
+    }
 }
 
 // MARK: - Wine Type
-
 enum WineType: String, CaseIterable, Codable {
     case red       = "red"
     case white     = "white"

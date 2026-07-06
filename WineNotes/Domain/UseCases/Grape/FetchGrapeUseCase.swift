@@ -1,8 +1,8 @@
 
 import Foundation
 
-protocol FetchGrapeUseCase {
-    func execute() async throws -> [Grape]
+protocol FetchGrapeUseCase{
+    func execute(_ wine: Wine) async throws -> [Grape]
 }
 
 final class FetchGrapeUseCaseImpl: FetchGrapeUseCase {
@@ -12,8 +12,7 @@ final class FetchGrapeUseCaseImpl: FetchGrapeUseCase {
         self.repo = repo
     }
     
-    func execute() async throws -> [Grape]{
-        let grapes = try await repo.fetchGrape()
-        return grapes
+    func execute(_ wine: Wine) async throws -> [Grape] {
+        try await repo.fetchGrape(wine)
     }
 }

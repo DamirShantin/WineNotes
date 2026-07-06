@@ -16,7 +16,7 @@ final class DeleteGrapeRegionUseCaseImpl: DeleteGrapeRegionUseCase {
         do {
             try await repo.deleteGrapeRegion(id)
         } catch {
-            throw GrapeError.nonFoundRegion
+            throw GrapeError.nonFoundRegions
         }
     }
 }
