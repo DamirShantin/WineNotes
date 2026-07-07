@@ -30,7 +30,7 @@
         <relationship name="wines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WineDTO"/>
     </entity>
     <entity name="TastingDTO" representedClassName="TastingDTO" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="String"/>
         <attribute name="price" attributeType="String"/>

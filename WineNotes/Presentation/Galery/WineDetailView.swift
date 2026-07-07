@@ -99,7 +99,7 @@ struct WineDetailView: View {
                         
                         LazyVStack{
                             ForEach(wine.tastings){ tasting in
-                                Text(String(tasting.year))
+                                TastingCardView(tasting: tasting)
                             }
                         }
                     }
@@ -116,7 +116,7 @@ struct WineDetailView: View {
     // MARK: Hero header
     private func heroHeader(_ type: WineType) -> some View {
         WineIconPlaceholderBackground(type: type)
-            .frame(height: 240)
+            .frame(height: 200)
             .overlay {
                 LinearGradient(colors: [WineTheme.background, .white.opacity(0), .white.opacity(0), .white.opacity(0)], startPoint: .bottom, endPoint: .top)
             }

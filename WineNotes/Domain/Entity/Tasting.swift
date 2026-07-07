@@ -3,15 +3,15 @@ import Foundation
 
 
 struct Tasting: Identifiable {
-    var id:        String
-    var year:      Int
-    var date:      String?
-    var status:    WineStatus
-    var rating:    Double?               // 0.0 – 5.0, step 0.1
+    var id:         String
+    var year:       Int
+    var date:       Date?
+    var status:     WineStatus
+    var rating:     Double?               // 0.0 – 5.0, step 0.1
     var characters: WineCharacteristics?
-    var price:     String
-    var shop:      String?
-    var desc:      String?
+    var price:      String
+    var shop:       String?
+    var desc:       String?
 }
 
 

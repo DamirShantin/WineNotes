@@ -1,9 +1,11 @@
+import SwiftUI
+
 let sampleTastings: [Tasting] = [
-    Tasting(id: "101", year: 2018, date: "12 апр 2024", status: .tasted,
+    Tasting(id: "101", year: 2018, date: Date(), status: .tasted,
             characters: WineCharacteristics(acidity: 4, dryness: 4, richness: 3, density: 5),
             price: "12 400 ₽", shop: "Spb AM",
             desc: "Элегантное, с ароматом тёмных ягод и кедра. Шёлковые танины и очень долгое послевкусие."),
-    Tasting(id: "102", year: 2015, date: "5 фев 2023", status: .tasted,
+    Tasting(id: "102", year: 2015, date: Date(), status: .tasted,
             characters: WineCharacteristics(acidity: 4, dryness: 2, richness: 5, density: 1),
             price: "18 000 ₽", shop: "Italy",
             desc: "Более зрелое и сложное. Кожа, трюфель, сухофрукты. Танины полностью интегрированы.")
@@ -14,7 +16,7 @@ let sampleWines: [Wine] = [
          type: .red, grapes: [caberneGrape, merloGrape], tastings: sampleTastings, status: .tasted),
     Wine(id: "2", name: "Barolo Cannubi", country: "Италия", region: "Пьемонт",
          type: .red, grapes: [merloGrape],
-         tastings: [Tasting(id: "201", year: 2017, date: "25 янв 2024", status: .tasted,
+         tastings: [Tasting(id: "201", year: 2017, date: Date(), status: .tasted,
                             characters: WineCharacteristics(acidity: 4, dryness: 4, richness: 3, density: 5),
                             price: "8 200 ₽",shop: "Russia", desc: "Монументальное вино. Роза и смола, бесконечное послевкусие.")], status: .tasted),
     Wine(id: "3", name: "Sancerre Blanc", country: "Франция", region: "Луара",
@@ -22,7 +24,7 @@ let sampleWines: [Wine] = [
          tastings: [
             Tasting(id: "301", year: 2022, date: nil, status: .collection, rating: nil,
                     characters: nil, price: "3 200 ₽",shop: "Spb AM", desc: ""),
-            Tasting(id: "302", year: 2021, date: "10 май 2023", status: .tasted,
+            Tasting(id: "302", year: 2021, date: Date(), status: .tasted,
                      rating: 3.8, characters: WineCharacteristics(acidity: 4, dryness: 4, richness: 2, density: 2),
                      price: "2 900 ₽",shop: "France ", desc: "Свежий, цитрусовый, с лёгкой минеральностью."),
          ], status: .tasted),
@@ -36,10 +38,10 @@ let sampleWines: [Wine] = [
     Wine(id: "5", name: "Massandra Muscat", country: "Россия", region: "Крым",
          type: .fortified, grapes: [chardonayGrape],
          tastings: [
-            Tasting(id: "501", year: 2020, date: "3 мар 2024", status: .tasted,
+            Tasting(id: "501", year: 2020, date: Date(), status: .tasted,
                      rating: 4.0, characters: WineCharacteristics(acidity: 2, dryness: 1, richness: 3, density: 4),
                      price: "1 800 ₽", shop: "Russia", desc: "Медовый, ноты апельсиновой цедры и абрикоса."),
-            Tasting(id: "502", year: 2018, date: "12 дек 2022", status: .tasted,
+            Tasting(id: "502", year: 2018, date: Date(), status: .tasted,
                      rating: 4.2, characters: WineCharacteristics(acidity: 2, dryness: 4, richness: 1, density: 5),
                      price: "1 600 ₽", shop: "Russia", desc: "Более насыщенный и концентрированный."),
          ], status: .tasted),
