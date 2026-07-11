@@ -39,7 +39,7 @@ extension WineDTO {
     }
     
     var type: WineType{
-        get { WineType(rawValue: typeRaw) ?? .red }
+        get { WineType(rawValue: typeRaw) ?? .still }
         set { statusRaw = newValue.rawValue }
     }
 

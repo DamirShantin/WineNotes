@@ -7,6 +7,7 @@ struct Wine: Identifiable {
     var country:  String   // GrapeCountry
     var region:   String   // GrapeRegion
     var type:     WineType
+    var color:    WineColor
     var grapes:   [Grape]
     var tastings: [Tasting]
     var status:   WineStatus
@@ -24,31 +25,48 @@ struct Wine: Identifiable {
         return years.count > 3 ? "\(shown)..." : shown
     }
 }
-
-// MARK: - Wine Type
-enum WineType: String, CaseIterable, Codable {
+// MARK: - Wine color
+enum WineColor: String, CaseIterable, Codable {
     case red       = "red"
     case white     = "white"
-    case sparkling = "sparkling"
     case rose      = "rosé"
-    case fortified = "fortified"
 
     var displayName: String {
         switch self {
         case .red:       return "Красное"
         case .white:     return "Белое"
-        case .sparkling: return "Игристое"
         case .rose:      return "Розовое"
+        }
+    }
+    
+    var dotColorHex: String {
+        switch self {
+        case .red:       return "#D04060"
+        case .white:     return "#D4B840"
+        case .rose:      return "#E07090"
+        }
+    }
+}
+
+
+// MARK: - Wine Type
+enum WineType: String, CaseIterable, Codable {
+    case still     = "still"
+    case sparkling = "sparkling"
+    case fortified = "fortified"
+
+    var displayName: String {
+        switch self {
+        case .still:     return "Тихое"
+        case .sparkling: return "Игристое"
         case .fortified: return "Крепленое"
         }
     }
 
     var dotColorHex: String {
         switch self {
-        case .red:       return "#D04060"
-        case .white:     return "#D4B840"
+        case .still:     return "#D4B840" // fix
         case .sparkling: return "#5BAAD4"
-        case .rose:      return "#E07090"
         case .fortified: return "#C08040"
         }
     }

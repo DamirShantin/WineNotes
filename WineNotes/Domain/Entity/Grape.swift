@@ -1,7 +1,9 @@
 
 import Foundation
 
-struct Grape: Identifiable {
+struct Grape: Identifiable, Equatable {
+    
+    
     var id:        String
     var name:      String          // Russian
     var latin:     String?         // Latin
@@ -11,6 +13,10 @@ struct Grape: Identifiable {
     var countries: [GrapeCountry]  //
     var aromas:    String?
     var desc:      String?         // descriptions
+    
+    static func == (lhs: Grape, rhs: Grape) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name
+    }
 }
 
 enum GrapeColor: String, CaseIterable {

@@ -24,13 +24,15 @@ struct WineCardView: View {
                             
                             Spacer()
                             
-                            Text("\(wine.tastedCount) дег.")
-                                .font(WineFont.captionMedium(10))
-                                .foregroundStyle(WineTheme.burgundy)
-                                .padding(.horizontal, 8)
-                                .padding(.vertical, 4)
-                                .background(WineTheme.burgundy.opacity(0.12))
-                                .cornerRadius(8)
+                            if wine.tastedCount > 1 {
+                                Text("\(wine.tastedCount) дег.")
+                                    .font(WineFont.captionMedium(10))
+                                    .foregroundStyle(WineTheme.burgundy)
+                                    .padding(.horizontal, 8)
+                                    .padding(.vertical, 4)
+                                    .background(WineTheme.burgundy.opacity(0.12))
+                                    .cornerRadius(8)
+                            }
 
                         }
                         

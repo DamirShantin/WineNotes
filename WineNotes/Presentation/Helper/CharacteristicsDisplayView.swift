@@ -36,11 +36,11 @@ struct CharacteristicsDisplayView: View {
                 ZStack(alignment: .leading) {
                     RoundedRectangle(cornerRadius: 4)
                         .fill(WineTheme.sliderBg)
-                        .frame(height: 3)
+                        .frame(height: 2)
                     
                     RoundedRectangle(cornerRadius: 4)
                         .fill(WineTheme.sliderFill)
-                        .frame(width: geo.size.width * CGFloat(value) / 5.0, height: 3)
+                        .frame(width: geo.size.width * CGFloat(value) / 5.0, height: 2)
                 }
             }
             .frame(height: 6)

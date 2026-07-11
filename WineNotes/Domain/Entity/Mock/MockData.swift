@@ -13,14 +13,14 @@ let sampleTastings: [Tasting] = [
 
 let sampleWines: [Wine] = [
     Wine(id: "1", name: "Château Margaux", country: "Франция", region: "Бордо",
-         type: .red, grapes: [caberneGrape, merloGrape], tastings: sampleTastings, status: .tasted),
+         type: .still, color: .red, grapes: [caberneGrape, merloGrape], tastings: sampleTastings, status: .tasted),
     Wine(id: "2", name: "Barolo Cannubi", country: "Италия", region: "Пьемонт",
-         type: .red, grapes: [merloGrape],
+         type: .still, color: .red, grapes: [merloGrape],
          tastings: [Tasting(id: "201", year: 2017, date: Date(), status: .tasted,
                             characters: WineCharacteristics(acidity: 4, dryness: 4, richness: 3, density: 5),
                             price: "8 200 ₽",shop: "Russia", desc: "Монументальное вино. Роза и смола, бесконечное послевкусие.")], status: .tasted),
     Wine(id: "3", name: "Sancerre Blanc", country: "Франция", region: "Луара",
-         type: .white, grapes: [chardonayGrape],
+         type: .still, color: .white, grapes: [chardonayGrape],
          tastings: [
             Tasting(id: "301", year: 2022, date: nil, status: .collection, rating: nil,
                     characters: nil, price: "3 200 ₽",shop: "Spb AM", desc: ""),
@@ -29,14 +29,14 @@ let sampleWines: [Wine] = [
                      price: "2 900 ₽",shop: "France ", desc: "Свежий, цитрусовый, с лёгкой минеральностью."),
          ], status: .tasted),
     Wine(id: "4", name: "Veuve Clicquot", country: "Франция", region: "Шампань",
-         type: .sparkling, grapes: [chardonayGrape],
+         type: .sparkling, color: .white, grapes: [chardonayGrape],
          tastings: [
             Tasting(id: "401", year: 2019, date: nil, status: .collection,
                             rating: nil, characters: nil,
                     price: "5 600 ₽",shop: "Spb AM", desc: "")
          ], status: .collection),
     Wine(id: "5", name: "Massandra Muscat", country: "Россия", region: "Крым",
-         type: .fortified, grapes: [chardonayGrape],
+         type: .fortified, color: .red, grapes: [chardonayGrape],
          tastings: [
             Tasting(id: "501", year: 2020, date: Date(), status: .tasted,
                      rating: 4.0, characters: WineCharacteristics(acidity: 2, dryness: 1, richness: 3, density: 4),
@@ -46,7 +46,7 @@ let sampleWines: [Wine] = [
                      price: "1 600 ₽", shop: "Russia", desc: "Более насыщенный и концентрированный."),
          ], status: .tasted),
     Wine(id: "6", name: "Plessie Duval", country: france.name, region: france.regions![1].name,
-         type: .rose, grapes: [
+         type: .still, color: .rose, grapes: [
         Grape(id: "11", name: "pino nuar", color: .red, countries: [france])
     ], tastings: [
         Tasting(id: "11", year: 2010, status: .collection, price: "720")
@@ -90,7 +90,7 @@ let chardonayGrape = Grape(id: "3", name: "Шардоне", latin: "Chardonnay",
                            aromas: "Яблоко, груша, ваниль, масло",
                            desc: "Самый популярный белый сорт. Нейтральный вкус ярко выражает терруар.")
 // MARK: - Wines
-let roseDAnju = Wine(id: "6", name: "Plessie Duval", country: france.name, region: france.regions![1].name, type: .rose, grapes: [
+let roseDAnju = Wine(id: "6", name: "Plessie Duval", country: france.name, region: france.regions![1].name, type: .still, color: .rose, grapes: [
     Grape(id: "11", name: "pino nuar", color: .red, countries: [france])
 ], tastings: [
     Tasting(id: "11", year: 2010, status: .collection, price: "720")

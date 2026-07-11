@@ -13,6 +13,7 @@ enum WineTheme {
     static let textPrimary     = Color(hex: "#1A0E13")
     static let textSecondary   = Color(hex: "#A89298")
     static let placeholder     = Color(hex: "#C8B8BC")
+    static let textButton      = Color(hex: "#a99298")
 
     // MARK: Accent
     static let burgundy        = Color(hex: "#8C1C32")
@@ -50,22 +51,39 @@ enum WineTheme {
     // MARK: - Type dot color helper
     static func typeDotColor(_ type: WineType) -> Color {
         switch type {
+        case .still:     return dotWhite
+        case .sparkling: return dotSparkling
+        case .fortified: return dotFortified
+        }
+    }
+    static func typeDotColor(_ type: WineColor) -> Color {
+        switch type {
         case .red:       return dotRed
         case .white:     return dotWhite
-        case .sparkling: return dotSparkling
         case .rose:      return dotRose
-        case .fortified: return dotFortified
+        }
+    }
+    static func typeDotColor(_ type: GrapeColor) -> Color {
+        switch type {
+        case .red:       return dotRed
+        case .white:     return dotWhite
         }
     }
     
     // MARK: - Type gradient helper
     static func typeGradient(_ type: WineType) -> [Color] {
         switch type {
+        case .still:     return [Color(hex: "100E00"), Color(hex: "5A4010"), Color(hex: "C9A96E")]
+        case .sparkling: return [Color(hex: "050F18"), Color(hex: "1A3A52"), Color(hex: "4A7A9C")]
+        case .fortified: return [Color(hex: "0A0416"), Color(hex: "3A1F5C"), Color(hex: "7B5AAC")]
+        }
+    }
+    
+    static func typeGradient(_ type: WineColor) -> [Color] {
+        switch type {
         case .red:       return [Color(hex: "1A0408"), Color(hex: "5C0F1F"), Color(hex: "8C1C32")]
         case .white:     return [Color(hex: "100E00"), Color(hex: "5A4010"), Color(hex: "C9A96E")]
-        case .sparkling: return [Color(hex: "050F18"), Color(hex: "1A3A52"), Color(hex: "4A7A9C")]
         case .rose:      return [Color(hex: "1A0A10"), Color(hex: "8C1C32")]
-        case .fortified: return [Color(hex: "0A0416"), Color(hex: "3A1F5C"), Color(hex: "7B5AAC")]
         }
     }
     // MARK: - Type status wine color helper

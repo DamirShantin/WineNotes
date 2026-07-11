@@ -21,3 +21,9 @@ struct NavIconButton: View {
         
     }
 }
+
+#Preview {
+    NavIconButton(systemImage: "plus") {
+        //
+    }
+}
