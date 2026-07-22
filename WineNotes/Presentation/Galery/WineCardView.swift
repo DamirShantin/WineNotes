@@ -5,9 +5,7 @@ struct WineCardView: View {
 
     var body: some View {
         ZStack{
-//            Color.red
             HStack {
-                // icon
                 iconWine(wine.type)
                     .frame(width: 54, height: 72)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -94,7 +92,6 @@ struct WineCardView: View {
     // MARK: Icon wine
     private func iconWine(_ type: WineType) -> some View {
         ZStack{
-            // placeholder background
             WineIconPlaceholderBackground(type: type)
             
             

@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct AddWineView: View {
-    @State private var currentPage: Int = 1
+    @State private var currentPage: Int = 2
     
     @State private var nameWine:        String = ""
     @State private var textCountry:     String = ""
@@ -12,12 +12,12 @@ struct AddWineView: View {
     @State private var grapes:          [Grape] = []
     @State private var searchGrapeText: String = ""
     
-    @State private var tasting: Tasting?
+    @State private var tasting: Tasting = Tasting(id: UUID().uuidString, year: 2001, status: .tasted, price: "200")
     
     var body: some View {
         VStack(spacing: 0){
             // header
-            header()
+            header
                 .padding(.horizontal, WineLayout.paddingHorizontal)
             // divider
             divider
@@ -31,23 +31,24 @@ struct AddWineView: View {
                                selectedColor: $selectedColor,
                                grapes: $grapes,
                                searchGrapeText: $searchGrapeText)
-                
                 .padding(.horizontal, WineLayout.paddingHorizontal)
                 .padding(.top)
                 .background(WineTheme.background)
-
+                
                 
             } else {
-                AddWinePageTwo()
+                AddTastingView(tasting: $tasting)
                     .padding(.horizontal, WineLayout.paddingHorizontal)
+                    .padding(.top)
+                    .background(WineTheme.background)
             }
-                
+            
             
         }
     }
     
     // MARK: Header
-    private func header() -> some View {
+    private var header: some View {
         HStack {
             Button{
                 withAnimation{
@@ -133,7 +134,7 @@ struct AddWinePageOne: View {
                 typeWine
                 
                 // color
-                colorWine()
+                colorWine
                                 
                 // added grapes
                 allAddedGrapes(grape: $grapes)
@@ -212,7 +213,7 @@ struct AddWinePageOne: View {
     }
     
     // MARK: Color wine
-    private func colorWine() -> some View{
+    private var colorWine: some View{
         VStack(alignment: .leading){
             Text("Цвет вина")
                 .textCase(.uppercase)
@@ -279,10 +280,9 @@ struct AddWinePageOne: View {
         }
     }
     
-    @ViewBuilder
     private func chipFavoriteGrape(grape: Grape) -> some View {
         let isActive = grapes.contains(where: { $0 == grape})
-        Button {
+        return Button {
             withAnimation{
                 checkGrape(grape)
             }
@@ -302,7 +302,6 @@ struct AddWinePageOne: View {
         }
     }
     
-    @ViewBuilder
     private func allAddedGrapes(grape: Binding<[Grape]>) -> some View {
         FlowLayout{
             ForEach(grapes){ grape in
@@ -311,7 +310,6 @@ struct AddWinePageOne: View {
         }
     }
     
-    @ViewBuilder
     private func chipAddedGrape(grape: Grape) -> some View {
         HStack(spacing: 5){
             Text(grape.name)
@@ -342,51 +340,6 @@ struct AddWinePageOne: View {
         }
     }
 
-}
-
-// MARK: - Page two
-struct AddWinePageTwo: View {
-    var body: some View {
-        VStack{
-            Text("page 2")
-            
-            Spacer()
-        }
-    }
-}
-
-struct CustomTextField: View {
-    let label: String
-    let example: String
-    @Binding var text: String
-    var body: some View {
-        VStack(alignment: .leading){
-            Text(label)
-                .textCase(.uppercase)
-                .font(WineFont.bodySemibold(12))
-                .foregroundColor(WineTheme.textButton)
-                .lineLimit(1)
-            
-            HStack{
-                TextField(example, text: $text)
-                    .font(WineFont.body())
-                    .foregroundColor(WineTheme.textPrimary)
-                if !text.isEmpty {
-                    Button { text = "" } label: {
-                        Image(systemName: "xmark.circle.fill").foregroundColor(WineTheme.placeholder)
-                    }
-                }
-            }
-            .padding(.horizontal, 14)
-            .frame(height: 40)
-            .background(WineTheme.cardBackground)
-            .cornerRadius(WineLayout.inputRadius)
-            .overlay(
-                RoundedRectangle(cornerRadius: WineLayout.inputRadius)
-                    .stroke(WineTheme.inputBorder, lineWidth: 1)
-            )
-        }
-    }
 }
 
 #Preview {

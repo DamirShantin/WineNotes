@@ -36,24 +36,7 @@ struct GaleryMainView:  View {
             statusFilterRow
                 .padding(.bottom, 8)
             
-            // Wine list
-            ZStack{
-                WineTheme.background
-                
-                if filteredWines.isEmpty {
-                    emptyState
-                } else {
-                    ScrollView {
-                        LazyVStack(spacing: WineLayout.cardSpacing) {
-                            ForEach(filteredWines) { wine in
-                                WineCardView(wine: wine)
-                            }
-                        }
-                        .padding(.horizontal, WineLayout.paddingHorizontal)
-                        .padding(.vertical, 16)
-                    }
-                }
-            }
+            wineList
             
         }
         
@@ -176,6 +159,30 @@ struct GaleryMainView:  View {
             .padding(.horizontal, WineLayout.paddingHorizontal)
         }
     }
+    
+    // MARK: wine list
+    
+    @ViewBuilder
+    private var wineList: some View{
+        ZStack{
+            WineTheme.background
+            
+            if filteredWines.isEmpty {
+                emptyState
+            } else {
+                ScrollView {
+                    LazyVStack(spacing: WineLayout.cardSpacing) {
+                        ForEach(filteredWines) { wine in
+                            WineCardView(wine: wine)
+                        }
+                    }
+                    .padding(.horizontal, WineLayout.paddingHorizontal)
+                    .padding(.vertical, 16)
+                }
+            }
+        }
+    }
+    
     
     // MARK: - Empty State
     private var emptyState: some View {
